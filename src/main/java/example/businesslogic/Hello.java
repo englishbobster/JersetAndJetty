@@ -1,8 +1,5 @@
 package example.businesslogic;
 
-/**
- * Created by stos on 19/05/16.
- */
 public class Hello {
 
     private String type;

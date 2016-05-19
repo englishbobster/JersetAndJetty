@@ -7,9 +7,6 @@ import org.eclipse.jetty.servlet.ServletHolder;
 import org.glassfish.jersey.server.ResourceConfig;
 import org.glassfish.jersey.servlet.ServletContainer;
 
-/**
- * Created by stos on 19/05/16.
- */
 public class JerseyServer {
     private static final int LOAD_ON_STARTUP = 1;
     private Server server;

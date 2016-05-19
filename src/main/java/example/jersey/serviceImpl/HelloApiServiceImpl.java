@@ -10,13 +10,11 @@ import javax.ws.rs.core.Response;
 import javax.ws.rs.core.SecurityContext;
 import java.util.List;
 
-/**
- * Created by stos on 19/05/16.
- */
 public class HelloApiServiceImpl extends HelloApiService {
 
     @Inject
     HelloAdapter adapter;
+
     List<HelloModel> hellos = ImmutableList.of(new HelloModel().sweGreet("Hej"));
 
     @Override

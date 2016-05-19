@@ -3,9 +3,6 @@ package example.businesslogic;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by stos on 19/05/16.
- */
 public class HelloFetcher {
    List<Hello> greetings;
 

@@ -6,9 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-/**
- * Created by stos on 19/05/16.
- */
+
 public class HelloListModel {
     private List<HelloModel> hello = new ArrayList<HelloModel>();
 

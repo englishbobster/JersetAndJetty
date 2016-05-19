@@ -4,9 +4,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.Objects;
 
-/**
- * Created by stos on 19/05/16.
- */
 public class HelloModel {
     private String sweGreet = null;
     private String ukGreet = null;
