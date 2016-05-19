@@ -15,4 +15,6 @@ dependencies {
     compile 'org.glassfish.jersey.containers:jersey-container-servlet:2.22.2'
     compile 'org.eclipse.jetty:jetty-servlet:9.3.2.v20150730'
     compile 'io.swagger:swagger-jaxrs:1.5.8'
+    compile 'org.slf4j:slf4j-simple:1.7.21'
+
 }
