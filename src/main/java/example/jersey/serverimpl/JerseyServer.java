@@ -28,7 +28,6 @@ public class JerseyServer {
         try {
             server.start();
             server.join();
- //           startServlet();
         } catch (Exception e) {
             System.out.println("Failed to start jetty server for rest interface");
         } finally {
