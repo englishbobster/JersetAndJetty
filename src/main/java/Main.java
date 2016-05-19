@@ -1,5 +1,5 @@
 import example.businesslogic.HelloFetcher;
-import example.jersey.serverimpl.JerseyServer;
+import example.jersey.serverImpl.JerseyServer;
 
 
 public class Main {

@@ -1,4 +1,4 @@
-package example.jersey.serverimpl;
+package example.jersey.serverImpl;
 
 import example.businesslogic.HelloFetcher;
 import org.eclipse.jetty.server.Server;

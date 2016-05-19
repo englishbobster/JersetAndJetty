@@ -1,4 +1,4 @@
-package example.jersey.serverimpl;
+package example.jersey.serverImpl;
 
 import example.businesslogic.HelloFetcher;
 import example.jersey.serviceImpl.HelloAdapter;
@@ -19,7 +19,7 @@ public class JerseyServerConfig extends ResourceConfig {
                 bind(helloAdapter).to(HelloAdapter.class);
             }
         });
-        packages("example.jersey");
+        packages("example.jersey.api.hello", "example.jersey.api.serviceImpl");
         property(ServerProperties.MEDIA_TYPE_MAPPINGS, "json : application/json");
     }
 }
