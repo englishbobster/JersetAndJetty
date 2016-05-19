@@ -10,15 +10,17 @@ import javax.ws.rs.core.SecurityContext;
 public class HelloApiServiceImpl extends HelloApiService {
 
     @Inject
-    HelloAdapter adapter;
+    private HelloAdapter adapter;
 
 
     @Override
     public Response retrieveGreets(SecurityContext securityContext) throws NotFoundException {
         return Response.ok().entity(adapter.getGreets()).build();
 
-/* Use this to test if everything is working as it should be
+/*
+ Use this to test if everything is working as it should be
         List<HelloModel> hellos = ImmutableList.of(new HelloModel().sweGreet("Hej"));
-        return Response.ok().entity(new HelloListModel().hello(hellos)).build();*/
+        return Response.ok().entity(new HelloListModel().hello(hellos)).build();
+*/
     }
 }

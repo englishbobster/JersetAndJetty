@@ -7,8 +7,11 @@ import org.glassfish.jersey.server.ResourceConfig;
 import org.glassfish.jersey.server.ServerProperties;
 
 public class JerseyServerConfig extends ResourceConfig {
+
+    private final HelloAdapter helloAdapter;
+
     public JerseyServerConfig(HelloFetcher helloFetcher) {
-        final HelloAdapter helloAdapter = new HelloAdapter(helloFetcher);
+        helloAdapter = new HelloAdapter(helloFetcher);
 
         register(new AbstractBinder() {
             @Override

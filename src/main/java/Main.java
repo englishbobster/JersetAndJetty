@@ -11,8 +11,8 @@ public class Main {
         JerseyServer server = new JerseyServer(fetcher);
         server.startTheServer(SERVER_PORT_DEFAULT);
         while (true) {
-            Thread.sleep(10000);
-            System.out.println("ALIVE");
+            Thread.sleep(1000);
+            System.out.println(".");
         }
     }
 }

@@ -16,19 +16,10 @@ public class JerseyServer {
     public JerseyServer(HelloFetcher helloFetcher) {
         ResourceConfig cfg = new JerseyServerConfig(helloFetcher);
         servlet = new ServletHolder(new ServletContainer(cfg));
-        servlet.setInitOrder(LOAD_ON_STARTUP);
+        servlet.setInitOrder(0);
 
         context = new ServletContextHandler(ServletContextHandler.SESSIONS);
         context.addServlet(servlet, "/*");
-    }
-
-    private void startServlet() {
-        try {
-            servlet.start();
-            servlet.initialize();
-        } catch (Exception e) {
-            System.out.printf("Failed to start the server.");
-        }
     }
 
     public void startTheServer(int port) {
@@ -37,7 +28,7 @@ public class JerseyServer {
         try {
             server.start();
             server.join();
-            startServlet();
+ //           startServlet();
         } catch (Exception e) {
             System.out.println("Failed to start jetty server for rest interface");
         } finally {
