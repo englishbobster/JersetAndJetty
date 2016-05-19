@@ -8,7 +8,6 @@ import org.glassfish.jersey.server.ResourceConfig;
 import org.glassfish.jersey.servlet.ServletContainer;
 
 public class JerseyServer {
-    private static final int LOAD_ON_STARTUP = 1;
     private Server server;
     private final ServletContextHandler context;
     private final ServletHolder servlet;
