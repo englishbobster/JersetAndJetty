@@ -1,4 +1,3 @@
-# JersetAndJetty
-Jersey with Jetty example
+# JerseyAndJetty
 
-Trying to get container dependency injection working with jersey. Working example.
+Using Jersey container dependency injection with embedded Jetty.
