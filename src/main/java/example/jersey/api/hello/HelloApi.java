@@ -12,15 +12,19 @@ import javax.ws.rs.core.SecurityContext;
 @Path("/")
 public class HelloApi  {
 
+    private final HelloApiService delegate;
+
     @Inject
-    private HelloAdapter adapter;
-    private final HelloApiService delegate = new HelloApiServiceImpl();
+    public HelloApi(HelloAdapter adapter) {
+        delegate = new HelloApiServiceImpl(adapter);
+    }
+
 
     @GET
     @Path("/hello/")
     @Consumes({ "application/json" })
     @Produces({ "application/json" })
     public Response retrieveAlarmList( @Context SecurityContext securityContext) throws NotFoundException {
-        return delegate.retrieveGreets(securityContext, adapter);
+        return delegate.retrieveGreets(securityContext);
     }
 }

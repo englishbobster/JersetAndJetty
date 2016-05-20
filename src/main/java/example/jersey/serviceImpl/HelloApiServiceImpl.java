@@ -8,9 +8,15 @@ import javax.ws.rs.core.SecurityContext;
 
 public class HelloApiServiceImpl extends HelloApiService {
 
+    private final HelloAdapter adapter;
+
+    public HelloApiServiceImpl(HelloAdapter adapter){
+        this.adapter = adapter;
+    }
+
 
     @Override
-    public Response retrieveGreets(SecurityContext securityContext, HelloAdapter adapter) throws NotFoundException {
+    public Response retrieveGreets(SecurityContext securityContext) throws NotFoundException {
         return Response.ok().entity(adapter.getGreets()).build();
 
 /*
