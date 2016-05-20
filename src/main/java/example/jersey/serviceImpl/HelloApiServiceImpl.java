@@ -2,19 +2,15 @@ package example.jersey.serviceImpl;
 
 import example.jersey.api.hello.HelloApiService;
 
-import javax.inject.Inject;
 import javax.ws.rs.NotFoundException;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.SecurityContext;
 
 public class HelloApiServiceImpl extends HelloApiService {
 
-    @Inject
-    private HelloAdapter adapter;
-
 
     @Override
-    public Response retrieveGreets(SecurityContext securityContext) throws NotFoundException {
+    public Response retrieveGreets(SecurityContext securityContext, HelloAdapter adapter) throws NotFoundException {
         return Response.ok().entity(adapter.getGreets()).build();
 
 /*
